@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Slot extends Model
 {
     use HasFactory;
+    // public $fillable = ['nama', 'nis', 'agama', 'jenis_kelamin', 'alamat', 'tgl_lahir'];
+    public $guarded = ['id'];
+     public $timestamps = true;
 }
