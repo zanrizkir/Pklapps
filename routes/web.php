@@ -1,12 +1,12 @@
 <?php
 //Controler
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
 // use App\Http\Controllers\PostController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\SiswaControler;
-use App\Http\Controllers\LatihanControler;
-use App\Http\Controllers\PesertaController;
-use App\Http\Controllers\PelajaranController;
+use App\Http\Controllers\SlotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +66,10 @@ route::get('/menu/{menu?}/{menu1?}', function ($a = 'Silahkan Pesan ', $b = 'Sil
     return view('pages.makanan', compact('a', 'b'));
 });
 
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\LatihanControler;
+use App\Http\Controllers\PesertaController;
+use App\Http\Controllers\PelajaranController;
 use App\Http\Controllers\PengenalanControler;
 
 //passing data dari controller ke view
@@ -94,4 +98,17 @@ Route::get('/siswadb', [SiswaControler::class, 'siswa']);
 // Route Peserta db
 Route::get('/peserta', [PesertaController::class, 'index']);
 
-Route::get('/pelajaran', [PelajaranController::class,'index']);
+// Route::get('/pelaj aran', [PelajaranController::class, 'index']);
+
+//Route Hotel
+Route::get('/hotel', [App\Http\Controllers\HotelController::class, 'hotel']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('slot', SlotController::class);

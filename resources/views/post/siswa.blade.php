@@ -80,6 +80,20 @@
             </tr>
             @endforeach
         </table>
+        <table border="1" cellpadding='10' cellspacing='0'>
+            <tr>
+                <th>Id Karyawan</th>
+                <th>Nama Karyawan</th>
+                <th>JK</th>
+            </tr>
+            @foreach ($karyawan as $data)
+            <tr>
+                <td>{{ $data['id_karyawan'] }}</td>
+                <td>{{ $data['nm_karyawan'] }}</td>
+                <td>{{ $data['jk'] }}</td>
+            </tr>
+            @endforeach
+        </table>
     </fieldset>
 </body>
 
