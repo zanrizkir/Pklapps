@@ -6,7 +6,7 @@ use App\Models\Pelajaran;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class PostController extends Controller
+class PelajaranController extends Controller
 {
     public function index()
     {
