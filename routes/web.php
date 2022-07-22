@@ -2,9 +2,8 @@
 //Controler
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\PostController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SiswaControler;
 use App\Http\Controllers\SlotController;
 
@@ -98,7 +97,7 @@ Route::get('/siswadb', [SiswaControler::class, 'siswa']);
 // Route Peserta db
 Route::get('/peserta', [PesertaController::class, 'index']);
 
-// Route::get('/pelaj aran', [PelajaranController::class, 'index']);
+// Route::get('/pelajaran', [PelajaranController::class, 'index']);
 
 //Route Hotel
 Route::get('/hotel', [App\Http\Controllers\HotelController::class, 'hotel']);
